@@ -37,15 +37,20 @@ jobs:
         
     - name: Install dependencies
       run: npm install
+      working-directory: mjmarkgen-app  # यह लाइन जोड़ें
+
       
     - name: Add Android platform
       run: cordova platform add android@latest
+      working-directory: mjmarkgen-app
       
     - name: Build Android APK
       run: cordova build android --release
+      working-directory: mjmarkgen-app
       
     - name: Sign APK (Debug)
       run: cordova build android --debug
+      working-directory: mjmarkgen-app
       
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
