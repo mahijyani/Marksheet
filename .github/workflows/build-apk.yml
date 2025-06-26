@@ -31,6 +31,8 @@ jobs:
       uses: android-actions/setup-android@v3
     - name: Accept Android SDK Licenses
       run: yes | sdkmanager --licenses
+    - name: Install Android Build Tools 33.0.2  # ✅ Fix for build tools not found error
+      run: sdkmanager "build-tools;33.0.2"
       
     - name: Install Cordova CLI
       run: |
