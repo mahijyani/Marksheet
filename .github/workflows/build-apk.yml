@@ -77,10 +77,8 @@ jobs:
           
           Built from commit: ${{ github.sha }}
         files: |
-          platforms/android/app/build/outputs/apk/debug/app-debug.apk
-          platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
-        draft: false
-        prerelease: false
+          mjmarkgen-app/platforms/android/app/build/outputs/apk/debug/app-debug.apk
+          mjmarkgen-app/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
