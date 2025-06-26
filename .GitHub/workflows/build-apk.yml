@@ -38,9 +38,6 @@ jobs:
     - name: Install dependencies
       run: npm install
       
-    - name: Add Android platform
-      run: cordova platform add android@latest
-      
     - name: Build Android APK
       run: cordova build android --release
       
