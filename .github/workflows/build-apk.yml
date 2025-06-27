@@ -44,6 +44,7 @@ jobs:
       
     - name: Build Android APK
       run: cordova build android --release
+      working-directory: mjmarkgen-app
       
     - name: Sign APK (Debug)
       run: cordova build android --debug
